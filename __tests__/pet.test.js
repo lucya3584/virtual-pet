@@ -105,9 +105,13 @@ describe('checkUp', () => {
         pet.fitness = 3;
         expect(pet.checkUp()).toBe("I am hungry AND I need a walk")
     })
-    
+    it('if pet hunger is 4 or below and fitness is 4 or more, return "I feel great!"', () => {
+        const pet = new Pet('fido');
+        pet.hunger = 4;
+        pet.fitness = 4;
+        expect(pet.checkUp()).toBe('I feel great!'); 
 
+})
 });
-
 
 }); 
